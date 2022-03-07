@@ -1,0 +1,469 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="2/21/2022 10:06:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AMADEUS"
+  DTS:CreatorName="AMADEUS\antoi"
+  DTS:DTSID="{C7411824-DCE5-4FF9-879E-12398DDE397C}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="2060"
+  DTS:ObjectName="Package"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{303C56A1-3647-4BD1-AA1B-23752F0F07A3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.Forecasting.group4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{76ABEE3B-C5A1-4C73-A5F8-65342CFB972D}"
+      DTS:ObjectName="myrmidons-unamur.northeurope.cloudapp.azure.com.Forecasting.group4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=myrmidons-unamur.northeurope.cloudapp.azure.com;User ID=group4;Initial Catalog=Forecasting;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{76ABEE3B-C5A1-4C73-A5F8-65342CFB972D}myrmidons-unamur.northeurope.cloudapp.azure.com.Forecasting.group4;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+6HTGqTQP0WTqmdtRsxWJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAFTi+pWit2A3JPJXEbKPj9E2onwDUEkMLkAJT9nEIElgAAAAAOgAAAAAIAACAAAAASzNtwIintMpdRfYJj5tvAj7FD4KYg0EbZBhPP3I1rPjAAAAAR9bHAi+hLZvwXmApd1ntocjOEkT9mgvc0ZojkzUIxWdoiUkYYmiOqGVfeTL49YIlAAAAAfNAoJ/yItPy31iXVXPkcX37xuuOlY89WaldOPOV3AK8s5+yjFKeM45fCDWwx7bhB+A9sy/76m0Zj1ZpFa/8B9w</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.group4dwh.group4]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{0737B468-230F-4A47-96E8-0A24579C53A3}"
+      DTS:ObjectName="myrmidons-unamur.northeurope.cloudapp.azure.com.group4dwh.group4">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=myrmidons-unamur.northeurope.cloudapp.azure.com;User ID=group4;Initial Catalog=group4dwh;Provider=SQLOLEDB.1;Persist Security Info=True;Application Name=SSIS-Package-{0737B468-230F-4A47-96E8-0A24579C53A3}myrmidons-unamur.northeurope.cloudapp.azure.com.group4dwh.group4;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA+6HTGqTQP0WTqmdtRsxWJAAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAqR3jGw2IGTsF5rVrQ/y9j7f70ZKMXX/Ss7V1sD1ddNgAAAAAOgAAAAAIAACAAAAByK8REsyEJ1Pt3yeuW7PPHXo0PeX5BVqhDj9A574c8iTAAAAAhFmKdc5AhxOs+//p0Ll/liHgrEs6Djrp8faXIUTD2OdqvDUQhFtWZVSc2xpUqJ0dAAAAA3ryxT3ZiPCVW5pP0XneqgX/gnL8rGRgvLTvEUsPVdNDUlRkFqsxq7JDKftIBxmpncyABi/FlOYs3T98pI6csvA</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Tâche de flux de données"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tâche de flux de données"
+      DTS:DTSID="{FFB2F3FC-40D7-48A1-BF3B-E5E1A858F644}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Tâche de flux de données"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Tâche de flux de données\Destination OLE DB"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destination OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;4"
+              description="Destination OLE DB"
+              name="Destination OLE DB"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[dbo].[Destination OLE DB]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les valeurs fournies pour les colonnes d'identité seront copiées à la destination. Si la valeur est définie à False, les valeurs des colonnes d'identité seront générées automatiquement à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indique si les colonnes contenant la valeur NULL auront cette valeur NULL copiée à la destination. Si la valeur est définie à False, les colonnes contenant la valeur NULL auront leurs valeurs par défaut insérées à la destination. Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie les options à utiliser avec le chargement rapide.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie quand les validations sont émises pendant l'insertion des données.  Une valeur égale à 0 spécifie qu'une validation sera émise à la fin de l'insertion des données.  Ne s'applique que si le chargement rapide est activé."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.group4dwh.group4]"
+                  connectionManagerRefId="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.group4dwh.group4]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+                  errorOrTruncationOperation="Insérer"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrée de destination OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Id]"
+                      cachedDataType="guid"
+                      cachedName="Id"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Latitude]"
+                      cachedDataType="r8"
+                      cachedName="Latitude"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Latitude]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Latitude]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[Longitude]"
+                      cachedDataType="r8"
+                      cachedName="Longitude"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Longitude]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Longitude]" />
+                    <inputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].Columns[ETL_LOAD_ID]"
+                      cachedDataType="i4"
+                      cachedName="ETL_LOAD_ID"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ETL_LOAD_ID]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ETL_LOAD_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Id]"
+                      dataType="guid"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB].ExternalColumns[ETL_LOAD_ID]"
+                      dataType="i4"
+                      name="ETL_LOAD_ID" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de destination OLE DB"
+                  synchronousInputId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Destination OLE DB.Outputs[Sortie d'erreur de destination OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Tâche de flux de données\Source OLE DB"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Source OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Tous droits réservés; http://www.microsoft.com/sql/support;7"
+              description="Source OLE DB"
+              name="Source OLE DB"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Nombre de secondes avant l'expiration d'une commande.  Une valeur égale à 0 indique un délai d'expiration infini."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowset">[src].[FORECASTING_GeoLocation]</property>
+                <property
+                  dataType="System.String"
+                  description="Spécifie la variable contenant le nom de l'objet de base de données utilisé pour ouvrir un ensemble de lignes."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Commande SQL à exécuter."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="Variable contenant la commande SQL à exécuter."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie la page de codes de la colonne à utiliser lorsque les informations de page de codes ne sont pas disponibles à partir de la source de données."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Force l'utilisation de la valeur de propriété DefaultCodePage lors de la description des données caractères."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Spécifie le mode utilisé pour accéder à la base de données."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="Mappages entre les paramètres de la commande SQL et les variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Tâche de flux de données\Source OLE DB.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.Forecasting.group4]"
+                  connectionManagerRefId="Package.ConnectionManagers[myrmidons-unamur.northeurope.cloudapp.azure.com.Forecasting.group4]"
+                  description="Connexion OLE DB en cours d'exécution utilisée pour accéder à la base de données."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB]"
+                  name="Sortie de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      dataType="guid"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Id]"
+                      name="Id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Latitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Latitude]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Latitude]"
+                      name="Latitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Longitude]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Longitude]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[Longitude]"
+                      name="Longitude"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ETL_LOAD_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ETL_LOAD_ID]"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].Columns[ETL_LOAD_ID]"
+                      name="ETL_LOAD_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Id]"
+                      dataType="guid"
+                      name="Id" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Latitude]"
+                      dataType="r8"
+                      name="Latitude" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[Longitude]"
+                      dataType="r8"
+                      name="Longitude" />
+                    <externalMetadataColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB].ExternalColumns[ETL_LOAD_ID]"
+                      dataType="i4"
+                      name="ETL_LOAD_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB]"
+                  isErrorOut="true"
+                  name="Sortie d'erreur de source OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      dataType="guid"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Id]"
+                      name="Id" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Latitude]"
+                      dataType="r8"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Latitude]"
+                      name="Latitude" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Longitude]"
+                      dataType="r8"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[Longitude]"
+                      name="Longitude" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ETL_LOAD_ID]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ETL_LOAD_ID]"
+                      name="ETL_LOAD_ID" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie d'erreur de source OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Tâche de flux de données.Paths[Sortie de source OLE DB]"
+              endId="Package\Tâche de flux de données\Destination OLE DB.Inputs[Entrée de destination OLE DB]"
+              name="Sortie de source OLE DB"
+              startId="Package\Tâche de flux de données\Source OLE DB.Outputs[Sortie de source OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Cette section CDATA contient des informations sur la disposition du package. Elle comprend des informations telles que les coordonnées (x,y), la largeur et la hauteur.-->
+<!--Si vous modifiez manuellement cette section et commettez une erreur, vous pouvez la supprimer. -->
+<!--Le package pourra toujours se charger normalement, mais les informations de disposition précédente seront perdues et le concepteur réorganisera automatiquement les éléments sur l'aire de conception.-->
+<Objects
+  Version="8">
+  <!--Chaque nœud ci-dessous contiendra des propriétés qui n'affectent pas le comportement d'exécution.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\Tâche de flux de données"
+          TopLeft="455.833315220145,203.666668285264" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Tâche de flux de données">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Tâche de flux de données\Source OLE DB"
+          TopLeft="169.999993244807,93.6000007438659" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Tâche de flux de données\Destination OLE DB"
+          TopLeft="389.666652593348,96.166667148802" />
+        <EdgeLayout
+          Id="Package\Tâche de flux de données.Paths[Sortie de source OLE DB]"
+          TopLeft="321.999993244807,115.683333946334">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="67.6666593485411,0"
+              Start="0,0"
+              End="60.1666593485411,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="60.1666593485411,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Source OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Tâche de flux de données\Destination OLE DB">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
